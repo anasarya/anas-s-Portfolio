@@ -69,6 +69,42 @@ const Contact = () => {
     });
   };
 
+  const sendReviewNotification = (reviewData) => {
+    // Create email notification
+    const subject = encodeURIComponent('New Client Review Received - Portfolio Website');
+    const stars = '⭐'.repeat(reviewData.rating);
+    const emailBody = encodeURIComponent(`
+New Review Notification
+=======================
+
+Client Details:
+- Name: ${reviewData.name}
+- Email: ${reviewData.email}
+- Rating: ${stars} (${reviewData.rating}/5)
+
+Review:
+"${reviewData.description}"
+
+---
+This notification was sent automatically from your portfolio website.
+    `);
+    
+    // Create WhatsApp notification message
+    const whatsappMessage = `🔔 *New Review Alert!*%0A%0A👤 *Client:* ${reviewData.name}%0A📧 *Email:* ${reviewData.email}%0A${stars} *Rating:* ${reviewData.rating}/5%0A%0A💬 *Review:*%0A"${reviewData.description}"%0A%0A----%0APortfolio Website Notification`;
+    
+    // Send both email and WhatsApp notifications
+    const emailURL = `mailto:mr.anasali125@gmail.com?subject=${subject}&body=${emailBody}`;
+    const whatsappURL = `https://wa.me/923007359924?text=${whatsappMessage}`;
+    
+    // Open email client
+    window.open(emailURL, '_blank');
+    
+    // Also send WhatsApp notification after a short delay
+    setTimeout(() => {
+      window.open(whatsappURL, '_blank');
+    }, 1000);
+  };
+
   const handleReviewSubmit = (e) => {
     e.preventDefault();
     if (reviewData.name && reviewData.email && reviewData.description) {
@@ -78,14 +114,22 @@ const Contact = () => {
         rating: parseInt(reviewData.rating),
         description: reviewData.description
       };
+      
+      // Add review to state
       setReviews([...reviews, newReview]);
+      
+      // Send email notification
+      sendReviewNotification(reviewData);
+      
+      // Reset form
       setReviewData({
         name: '',
         email: '',
         rating: 5,
         description: ''
       });
-      alert('Thank you for your review! It has been added successfully.');
+      
+      alert('Thank you for your review! It has been added successfully and an email notification has been sent.');
     }
   };
 
@@ -337,6 +381,11 @@ const Contact = () => {
                       onChange={handleReviewChange}
                       required
                     ></textarea>
+                  </div>
+                  <div className="notification-info">
+                    <p className="notification-text">
+                      📧 When you submit this review, I'll receive an instant notification via email and WhatsApp.
+                    </p>
                   </div>
                   <button type="submit" className="btn btn-primary">
                     Submit Review

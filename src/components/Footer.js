@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p>
-              © 2024 Portfolio. Made with <FaHeart className="heart" /> by Anas Ali
+              © 2025 Portfolio. Made by Anas Ali
             </p>
             <button className="scroll-top" onClick={scrollToTop} aria-label="Scroll to top">
               <FaArrowUp />
