@@ -86,7 +86,7 @@
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     flex-direction: column;
     padding: 2rem;
@@ -95,6 +95,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
   }
 
   .nav-links.active {
@@ -104,7 +105,21 @@
   }
 
   .nav-links a {
-    padding: 0.5rem 0;
-    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    color: white !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--primary-color) !important;
+    background: rgba(0, 212, 255, 0.1);
+    padding-left: 1rem;
+    border-radius: 8px;
   }
 }

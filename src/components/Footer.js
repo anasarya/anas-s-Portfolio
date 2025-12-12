@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="#" aria-label="Instagram"><FaInstagram /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
-              <a href="https://wa.me/923001234567" aria-label="WhatsApp"><FaWhatsapp /></a>
+              <a href="https://wa.me/923007359924" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
               <p>📱 +92 300 7359924</p>
               <p>📍 Bahawalpur, Pakistan</p>
               <a 
-                href="https://wa.me/923001234567?text=Hi! I'd like to discuss a project." 
+                href="https://wa.me/923007359924?text=Hi! I'd like to discuss a project." 
                 className="whatsapp-contact"
                 target="_blank"
                 rel="noopener noreferrer"

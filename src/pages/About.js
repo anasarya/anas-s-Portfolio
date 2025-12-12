@@ -95,7 +95,7 @@ const About = () => {
               <p>
                 My journey in software development started during my university years, and since then, 
                 I've been constantly learning and adapting to new technologies. I believe in writing 
-                clearn, maintainable code and creating user experiences that are both beautiful and functional.
+                clean, maintainable code and creating user experiences that are both beautiful and functional.
               </p>
             </motion.div>
 

@@ -267,7 +267,7 @@ const Contact = () => {
             <h2>Need Quick Help?</h2>
             <p>For urgent inquiries or quick questions, reach out directly via WhatsApp!</p>
             <a 
-              href="https://wa.me/923001234567?text=Hi! I need help with my project." 
+              href="https://wa.me/923007359924?text=Hi! I need help with my project." 
               className="btn btn-primary whatsapp-btn"
               target="_blank"
               rel="noopener noreferrer"
