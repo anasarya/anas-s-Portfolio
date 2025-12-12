@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaDownload, FaCode, FaMobile, FaDatabase } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaDownload, FaCode, FaMobile, FaDatabase } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with modern design and secure payment integration",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      github: "",
       live: "#"
     },
     {
@@ -19,7 +19,7 @@ const Home = () => {
       title: "Task Management App",
       description: "Modern task management application with real-time updates and team collaboration",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      github: "https://github.com/anasarya/Tech-Solutions-",
       live: "#"
     },
     {
@@ -27,7 +27,7 @@ const Home = () => {
       title: "Weather Dashboard",
       description: "Beautiful weather dashboard with location-based forecasts and interactive maps",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      github: "https://github.com/anasarya/Weather-App-using-API",
       live: "#"
     },
     {
@@ -51,7 +51,7 @@ const Home = () => {
       title: "Chat Application",
       description: "Real-time chat application with video calling and file sharing features",
       image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      github: "https://github.com/anasarya/real-time-chat-Frontend-with-comon-conversation-",
       live: "#"
     }
   ];
@@ -138,8 +138,8 @@ const Home = () => {
               <div className="social-links">
                 <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
                 <a href="https://www.linkedin.com/in/anas-ali-42a890309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                <a href="https://www.instagram.com/maybee_anas" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                <a href="#" aria-label="Twitter"><FaTwitter /></a>
+                <a href="https://www.instagram.com/maybee_anasaur" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+                <a href="https://www.facebook.com/profile.php?id=100010716971266" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
               </div>
             </motion.div>
             

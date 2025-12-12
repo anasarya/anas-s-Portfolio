@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaHeart, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp, FaHeart, FaArrowUp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/anas-ali-42a890309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="https://www.instagram.com/maybee_anasaur" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-              <a href="#" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://www.facebook.com/profile.php?id=100010716971266" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
               <a href="https://wa.me/923007359924" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>
           </div>
