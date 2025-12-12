@@ -240,10 +240,10 @@ const Contact = () => {
                     <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                       <FaGithub />
                     </a>
-                    <a href="#" className="social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/anas-ali-42a890309/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                       <FaLinkedin />
                     </a>
-                    <a href="#" className="social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/maybee_anasaur" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                       <FaInstagram />
                     </a>
                     <a href="https://wa.me/923007359924" className="social-link whatsapp" aria-label="WhatsApp">

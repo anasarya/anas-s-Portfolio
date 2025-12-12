@@ -137,8 +137,8 @@ const Home = () => {
               </div>
               <div className="social-links">
                 <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-                <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
-                <a href="#" aria-label="Instagram"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/in/anas-ali-42a890309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                <a href="https://www.instagram.com/maybee_anasaur" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
                 <a href="#" aria-label="Twitter"><FaTwitter /></a>
               </div>
             </motion.div>
