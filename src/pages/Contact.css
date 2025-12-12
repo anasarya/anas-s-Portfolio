@@ -1,0 +1,301 @@
+.contact {
+  margin-top: 70px;
+  background: var(--bg-dark);
+}
+
+/* Contact Hero */
+.contact-hero {
+  background: var(--bg-darker);
+  text-align: center;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Content */
+.contact-content {
+  background: var(--bg-dark);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Contact Form */
+.contact-form-section .card {
+  padding: 3rem;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-buttons .btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 2rem 0;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.contact-info > p {
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-white);
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.contact-details h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.contact-details p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Social Section */
+.social-section {
+  text-align: center;
+}
+
+.social-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.social-link:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-link.whatsapp:hover {
+  background: #25d366;
+}
+
+/* Quick Contact */
+.quick-contact {
+  background: var(--bg-darker);
+}
+
+.quick-contact-content {
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quick-contact-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.quick-contact-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.whatsapp-btn {
+  background: #25d366 !important;
+  border-color: #25d366 !important;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e !important;
+  transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--bg-dark);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  padding: 2rem;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.faq-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-form-section .card {
+    padding: 2rem;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+  
+  .form-buttons .btn {
+    min-width: auto;
+  }
+  
+  .contact-methods {
+    gap: 1rem;
+  }
+  
+  .contact-item {
+    padding: 1rem;
+  }
+  
+  .quick-contact-content {
+    padding: 3rem 2rem;
+  }
+  
+  .quick-contact-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
