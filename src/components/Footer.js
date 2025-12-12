@@ -22,7 +22,7 @@ const Footer = () => {
               Let's build something great together!
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="GitHub"><FaGithub /></a>
+              <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
               <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
               <a href="https://wa.me/923001234567" aria-label="WhatsApp"><FaWhatsapp /></a>

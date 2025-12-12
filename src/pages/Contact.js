@@ -182,7 +182,7 @@ const Contact = () => {
                 <div className="social-section">
                   <h3>Follow Me</h3>
                   <div className="social-links">
-                    <a href="#" className="social-link" aria-label="GitHub">
+                    <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                       <FaGithub />
                     </a>
                     <a href="#" className="social-link" aria-label="LinkedIn">

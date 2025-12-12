@@ -43,7 +43,7 @@ const Home = () => {
       title: "Portfolio Website",
       description: "Responsive portfolio website with modern design and smooth animations",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "#",
+      github: "https://github.com/anasarya/anas-s-Portfolio",
       live: "#"
     },
     {
@@ -136,7 +136,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="social-links">
-                <a href="#" aria-label="GitHub"><FaGithub /></a>
+                <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
                 <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
                 <a href="#" aria-label="Twitter"><FaTwitter /></a>
               </div>
