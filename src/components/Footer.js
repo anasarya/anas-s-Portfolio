@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-logo">Portfolio</h3>
+            <h3 className="footer-logo">My Portfolio</h3>
             <p>
               Passionate Software Engineer creating amazing digital experiences. 
               Let's build something great together!

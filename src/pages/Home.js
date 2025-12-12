@@ -11,15 +11,15 @@ const Home = () => {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with modern design and secure payment integration",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "",
-      live: "#"
+      github: "https://github.com/anasarya/Tech-Solutions-",
+      live: "https://zdescargas.vip/"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Modern task management application with real-time updates and team collaboration",
+      title: "Task Management Form",
+      description: "Modern task management form with real-time updates and team collaboration",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      github: "https://github.com/anasarya/Tech-Solutions-",
+      github: "https://github.com/anasarya/Multi-Step-Form",
       live: "#"
     },
     {
