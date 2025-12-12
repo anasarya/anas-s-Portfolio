@@ -233,6 +233,143 @@
   transform: translateY(-2px);
 }
 
+/* Reviews Section */
+.reviews-section {
+  background: var(--bg-dark);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Review Form */
+.review-form-section .card {
+  padding: 3rem;
+}
+
+.review-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.review-form-section p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rating-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.star-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.star-label input {
+  display: none;
+}
+
+.star-icon {
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+.star-icon.active {
+  color: #ffd700;
+}
+
+.star-label:hover .star-icon {
+  color: #ffd700;
+}
+
+/* Reviews Display */
+.reviews-display-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.reviews-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.reviews-list::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 3px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+.review-item {
+  padding: 2rem;
+  background: var(--bg-white);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.review-header h4 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.review-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.review-rating .star-icon {
+  font-size: 1rem;
+  color: #ffd700;
+}
+
+.review-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
 /* FAQ Section */
 .faq-section {
   background: var(--bg-dark);
@@ -297,5 +434,18 @@
   
   .faq-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .review-form-section .card {
+    padding: 2rem;
+  }
+  
+  .reviews-list {
+    max-height: 400px;
   }
 }

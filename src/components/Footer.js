@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaHeart, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaWhatsapp, FaHeart, FaArrowUp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -24,6 +24,7 @@ const Footer = () => {
             <div className="footer-social">
               <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
               <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
               <a href="https://wa.me/923001234567" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>

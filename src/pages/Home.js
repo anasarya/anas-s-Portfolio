@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaDownload, FaCode, FaMobile, FaDatabase } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaDownload, FaCode, FaMobile, FaDatabase } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -138,6 +138,7 @@ const Home = () => {
               <div className="social-links">
                 <a href="https://github.com/anasarya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
                 <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+                <a href="#" aria-label="Instagram"><FaInstagram /></a>
                 <a href="#" aria-label="Twitter"><FaTwitter /></a>
               </div>
             </motion.div>

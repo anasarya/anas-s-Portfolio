@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaLinkedin, FaGithub, FaPaperPlane, FaInstagram, FaStar } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +10,34 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
+  const [reviewData, setReviewData] = useState({
+    name: '',
+    email: '',
+    rating: 5,
+    description: ''
+  });
+
+  const [reviews, setReviews] = useState([
+    {
+      id: 1,
+      name: "Ahmed Khan",
+      rating: 5,
+      description: "Excellent work! Delivered the project on time with amazing quality. Very professional and skilled developer."
+    },
+    {
+      id: 2,
+      name: "Sarah Ali",
+      rating: 5,
+      description: "Very professional and skilled developer. Highly recommended! Great communication throughout the project."
+    },
+    {
+      id: 3,
+      name: "Hassan Ahmed",
+      rating: 5,
+      description: "Great communication and technical expertise. Will work again! Outstanding results and timely delivery."
+    }
+  ]);
 
   const handleChange = (e) => {
     setFormData({
@@ -32,6 +60,33 @@ const Contact = () => {
     const emailBody = encodeURIComponent(`Hi,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     const emailURL = `mailto:mr.anasali125@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     window.location.href = emailURL;
+  };
+
+  const handleReviewChange = (e) => {
+    setReviewData({
+      ...reviewData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleReviewSubmit = (e) => {
+    e.preventDefault();
+    if (reviewData.name && reviewData.email && reviewData.description) {
+      const newReview = {
+        id: reviews.length + 1,
+        name: reviewData.name,
+        rating: parseInt(reviewData.rating),
+        description: reviewData.description
+      };
+      setReviews([...reviews, newReview]);
+      setReviewData({
+        name: '',
+        email: '',
+        rating: 5,
+        description: ''
+      });
+      alert('Thank you for your review! It has been added successfully.');
+    }
   };
 
   const contactInfo = [
@@ -188,7 +243,10 @@ const Contact = () => {
                     <a href="#" className="social-link" aria-label="LinkedIn">
                       <FaLinkedin />
                     </a>
-                    <a href="https://wa.me/923001234567" className="social-link whatsapp" aria-label="WhatsApp">
+                    <a href="#" className="social-link" aria-label="Instagram">
+                      <FaInstagram />
+                    </a>
+                    <a href="https://wa.me/923007359924" className="social-link whatsapp" aria-label="WhatsApp">
                       <FaWhatsapp />
                     </a>
                   </div>
@@ -217,6 +275,107 @@ const Contact = () => {
               <FaWhatsapp /> Chat on WhatsApp
             </a>
           </motion.div>
+        </section>
+
+        {/* Client Reviews Section */}
+        <section className="reviews-section section">
+          <div className="reviews-grid">
+            {/* Review Submission Form */}
+            <motion.div 
+              className="review-form-section"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="card">
+                <h2>Leave a Review</h2>
+                <p>Share your experience working with me</p>
+                <form className="review-form" onSubmit={handleReviewSubmit}>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name *"
+                      value={reviewData.name}
+                      onChange={handleReviewChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email *"
+                      value={reviewData.email}
+                      onChange={handleReviewChange}
+                      required
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Rating:</label>
+                    <div className="rating-input">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <label key={star} className="star-label">
+                          <input
+                            type="radio"
+                            name="rating"
+                            value={star}
+                            checked={reviewData.rating === star}
+                            onChange={handleReviewChange}
+                          />
+                          <FaStar className={`star-icon ${reviewData.rating >= star ? 'active' : ''}`} />
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <textarea
+                      name="description"
+                      placeholder="Your Review *"
+                      rows="4"
+                      value={reviewData.description}
+                      onChange={handleReviewChange}
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Submit Review
+                  </button>
+                </form>
+              </div>
+            </motion.div>
+
+            {/* Display Reviews */}
+            <motion.div 
+              className="reviews-display-section"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2>Client Reviews</h2>
+              <div className="reviews-list">
+                {reviews.map((review, index) => (
+                  <motion.div 
+                    key={review.id}
+                    className="review-item card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <div className="review-header">
+                      <h4>{review.name}</h4>
+                      <div className="review-rating">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <FaStar key={i} className="star-icon active" />
+                        ))}
+                      </div>
+                    </div>
+                    <p className="review-description">"{review.description}"</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </section>
 
         {/* FAQ Section */}
