@@ -1,0 +1,237 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.loading-screen.enter {
+  opacity: 1;
+}
+
+.loading-screen.show {
+  opacity: 1;
+}
+
+.loading-screen.exit {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
+}
+
+.loading-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.loading-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2rem;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: imageAppear 1s ease-out 0.5s forwards;
+}
+
+.loading-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.loading-image-border {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+  background-size: 200% 200%;
+  animation: borderRotate 2s linear infinite;
+  z-index: 1;
+}
+
+.loading-text {
+  margin-bottom: 3rem;
+}
+
+.loading-name {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textSlideUp 0.8s ease-out 1s forwards;
+  letter-spacing: -0.02em;
+}
+
+.loading-title {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textSlideUp 0.8s ease-out 1.3s forwards;
+  letter-spacing: 0.5px;
+}
+
+.loading-progress {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 0 auto;
+  overflow: hidden;
+  opacity: 0;
+  animation: progressAppear 0.5s ease-out 1.8s forwards;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  width: 0%;
+  animation: progressFill 1.5s ease-out 2s forwards;
+}
+
+.loading-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bg-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(102, 126, 234, 0.3);
+  border-radius: 50%;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 15%;
+  animation: float1 4s ease-in-out infinite;
+}
+
+.particle-2 {
+  top: 60%;
+  right: 20%;
+  animation: float2 3s ease-in-out infinite 1s;
+}
+
+.particle-3 {
+  bottom: 30%;
+  left: 25%;
+  animation: float3 5s ease-in-out infinite 2s;
+}
+
+/* Animations */
+@keyframes imageAppear {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressAppear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progressFill {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-15px) translateX(-15px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-25px) translateX(20px);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loading-name {
+    font-size: 2.5rem;
+  }
+  
+  .loading-title {
+    font-size: 1rem;
+  }
+  
+  .loading-image-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .loading-progress {
+    width: 150px;
+  }
+}
