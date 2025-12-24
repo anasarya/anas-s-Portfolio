@@ -90,7 +90,7 @@ This notification was sent automatically from your portfolio website.
     `);
     
     // Create WhatsApp notification message
-    const whatsappMessage = `🔔 *New Review Alert!*%0A%0A👤 *Client:* ${reviewData.name}%0A📧 *Email:* ${reviewData.email}%0A${stars} *Rating:* ${reviewData.rating}/5%0A%0A💬 *Review:*%0A"${reviewData.description}"%0A%0A----%0APortfolio Website Notification`;
+    const whatsappMessage = `[!] *New Review Alert!*%0A%0A[User] *Client:* ${reviewData.name}%0A[Email] *Email:* ${reviewData.email}%0A${stars} *Rating:* ${reviewData.rating}/5%0A%0A[Message] *Review:*%0A"${reviewData.description}"%0A%0A----%0APortfolio Website Notification`;
     
     // Send both email and WhatsApp notifications
     const emailURL = `mailto:mr.anasali125@gmail.com?subject=${subject}&body=${emailBody}`;
@@ -384,7 +384,7 @@ This notification was sent automatically from your portfolio website.
                   </div>
                   <div className="notification-info">
                     <p className="notification-text">
-                      📧 When you submit this review, I'll receive an instant notification via email and WhatsApp.
+                      [Email] When you submit this review, I'll receive an instant notification via email and WhatsApp.
                     </p>
                   </div>
                   <button type="submit" className="btn btn-primary">

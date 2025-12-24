@@ -70,7 +70,7 @@ const FloatingContacts = () => {
           {isOpen ? <FaTimes /> : <FaPlus />}
         </div>
         <span className="contact-text">CONTACT</span>
-        {!isOpen && <span className="contact-notification-badge">📞</span>}
+        {!isOpen && <span className="contact-notification-badge">[Call]</span>}
       </motion.button>
     </>
   );

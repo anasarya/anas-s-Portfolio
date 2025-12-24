@@ -323,7 +323,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="choose-icon">🚀</div>
+              <div className="choose-icon">⚡</div>
               <h3>Fast Delivery</h3>
               <p>Quick turnaround times without compromising on quality. Your project will be delivered on time, every time.</p>
             </motion.div>
@@ -345,7 +345,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="choose-icon">🎯</div>
+              <div className="choose-icon">●</div>
               <h3>Client-Focused</h3>
               <p>Your success is my priority. I work closely with you to understand your needs and exceed expectations.</p>
             </motion.div>
@@ -356,7 +356,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="choose-icon">🔧</div>
+              <div className="choose-icon">⚙</div>
               <h3>24/7 Support</h3>
               <p>Ongoing support and maintenance to ensure your application runs smoothly long after launch.</p>
             </motion.div>
@@ -367,7 +367,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <div className="choose-icon">💰</div>
+              <div className="choose-icon">$</div>
               <h3>Competitive Pricing</h3>
               <p>High-quality development services at affordable rates. Great value for your investment.</p>
             </motion.div>
@@ -378,7 +378,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <div className="choose-icon">🌟</div>
+              <div className="choose-icon">★</div>
               <h3>Proven Track Record</h3>
               <p>50+ successful projects and 30+ satisfied clients speak for the quality of work delivered.</p>
             </motion.div>

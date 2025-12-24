@@ -8,7 +8,7 @@ const FloatingAssistant = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "👋 Hi! I'm Anas's AI Assistant. I'm here to help you learn more about his services and experience. Feel free to ask me anything!",
+      text: "Hi! I'm Anas's AI Assistant. I'm here to help you learn more about his services and experience. Feel free to ask me anything!",
       sender: 'bot',
       timestamp: new Date().toLocaleTimeString()
     }
@@ -171,7 +171,7 @@ const FloatingAssistant = () => {
           <FaRobot />
         </div>
         <span className="assistant-text">AI HELP</span>
-        {!isOpen && <span className="notification-badge">💬</span>}
+        {!isOpen && <span className="notification-badge">[?]</span>}
       </motion.button>
     </>
   );

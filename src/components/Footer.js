@@ -53,9 +53,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <div className="footer-contact">
-              <p>📧 mr.anasali125@gmail.com</p>
-              <p>📱 +92 300 7359924</p>
-              <p>📍 Bahawalpur, Pakistan</p>
+              <p>[Email] mr.anasali125@gmail.com</p>
+              <p>[Phone] +92 300 7359924</p>
+              <p>[Location] Bahawalpur, Pakistan</p>
               <a 
                 href="https://wa.me/923007359924?text=Hi! I'd like to discuss a project." 
                 className="whatsapp-contact"

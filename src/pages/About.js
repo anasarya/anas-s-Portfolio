@@ -44,7 +44,7 @@ const About = () => {
     {
       id: 1,
       degree: "Bachelor of Computer Science",
-      institution: "Comsts University Islamabad, Abbottabad Campus",
+      institution: "Comsats University Islamabad, Abbottabad Campus",
       period: "2022 - 2026",
       description: "Current Enrolled. Specialized in software engineering and web development."
     }
