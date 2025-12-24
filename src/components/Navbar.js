@@ -24,6 +24,12 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+    // Scroll to top when menu item is clicked
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
