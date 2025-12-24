@@ -54,6 +54,16 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         <div className="bg-particle particle-1"></div>
         <div className="bg-particle particle-2"></div>
         <div className="bg-particle particle-3"></div>
+        
+        <div className="code-element code-1">
+          {'{ developer: "Anas Ali" }'}
+        </div>
+        <div className="code-element code-2">
+          {'const skills = ["React", "Node.js"];'}
+        </div>
+        <div className="code-element code-3">
+          {'function() { return "Full Stack"; }'}
+        </div>
       </div>
     </div>
   );
