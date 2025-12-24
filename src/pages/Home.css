@@ -40,7 +40,8 @@
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  color: var(--text-dark);
+  transition: color 0.3s ease;
 }
 
 .hero-text h2 {
@@ -109,20 +110,16 @@
   object-fit: cover;
   border-radius: 20px;
   border: 3px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
 }
 
 .image-container img:hover {
-  transform: translateY(-10px);
-  border-color: rgba(0, 212, 255, 0.4);
-  box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(0, 212, 255, 0.4);
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .image-bg {
@@ -134,16 +131,15 @@
   background: var(--gradient-primary);
   border-radius: 20px;
   z-index: 1;
-  opacity: 0.3;
-  animation: float-bg 4s ease-in-out infinite;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes float-bg {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(5px, -5px) rotate(1deg); }
-  50% { transform: translate(-3px, 3px) rotate(-1deg); }
-  75% { transform: translate(-5px, -3px) rotate(0.5deg); }
+.image-container:hover .image-bg {
+  opacity: 0.3;
 }
+
+/* Removed excessive float animation */
 
 /* What I Do Section */
 .what-i-do {
@@ -217,9 +213,9 @@
 }
 
 .service-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   border-color: var(--primary-color);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 10px 30px rgba(0, 153, 204, 0.15);
 }
 
 .service-icon {
@@ -229,9 +225,8 @@
 }
 
 .service-item:hover .service-icon {
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.1);
   color: var(--accent-color);
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 .service-item span {
@@ -273,9 +268,9 @@
 }
 
 .service-detail-card:hover {
-  transform: translateY(-10px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 153, 204, 0.1);
 }
 
 .detail-icon {
@@ -283,13 +278,11 @@
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
-  animation: float 3s ease-in-out infinite;
 }
 
 .service-detail-card:hover .detail-icon {
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.1);
   color: var(--accent-color);
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 .service-detail-card h3 {
@@ -318,10 +311,7 @@
   transform: translateY(-3px);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
+/* Removed excessive float animation */
 
 .skill-card h3 {
   font-size: 1.5rem;
@@ -457,8 +447,8 @@
 }
 
 .review-card:hover {
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: var(--shadow-glow);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 153, 204, 0.1);
 }
 
 .review-header {
@@ -478,8 +468,7 @@
 }
 
 .review-card:hover .review-avatar {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  transform: scale(1.05);
 }
 
 .review-header h4 {
@@ -500,19 +489,14 @@
 .star {
   color: #ffd700;
   font-size: 1.2rem;
-  transition: all 0.3s ease;
-  animation: twinkle 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 
 .review-card:hover .star {
-  transform: scale(1.2);
-  text-shadow: 0 0 10px #ffd700;
+  transform: scale(1.1);
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
+/* Removed excessive animations */
 
 .review-text {
   color: var(--text-light);
@@ -552,37 +536,9 @@
 }
 
 
-/* Animated Background Particles for Hero */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(0, 212, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(102, 224, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(0, 153, 204, 0.3), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(0, 212, 255, 0.3), transparent);
-  background-repeat: repeat;
-  background-size: 150px 100px;
-  animation: sparkle 20s linear infinite;
-  pointer-events: none;
-}
+/* Removed excessive background animations */
 
-@keyframes sparkle {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-100px); }
-}
-
-/* Glowing Text Effect */
-.hero-text h1:hover {
-  text-shadow: 
-    0 0 10px rgba(0, 212, 255, 0.5),
-    0 0 20px rgba(0, 212, 255, 0.3),
-    0 0 30px rgba(0, 212, 255, 0.2);
-}
+/* Removed excessive glowing text effect */
 
 /* Project Card Enhanced Hover */
 .project-content h3 {
@@ -607,20 +563,7 @@
   transform: translateX(5px);
 }
 
-/* Social Links Pulse */
-.social-links a {
-  animation: social-pulse 3s ease-in-out infinite;
-}
-
-.social-links a:nth-child(1) { animation-delay: 0s; }
-.social-links a:nth-child(2) { animation-delay: 0.5s; }
-.social-links a:nth-child(3) { animation-delay: 1s; }
-.social-links a:nth-child(4) { animation-delay: 1.5s; }
-
-@keyframes social-pulse {
-  0%, 100% { box-shadow: var(--shadow); }
-  50% { box-shadow: var(--shadow-glow); }
-}
+/* Removed excessive social pulse animation */
 /* Why Choose Us Section */
 .why-choose-us {
   background: var(--bg-darker);
@@ -651,20 +594,21 @@
 }
 
 .choose-card:hover {
-  transform: translateY(-10px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 153, 204, 0.1);
 }
 
 .choose-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  color: var(--primary-color);
 }
 
 .choose-card:hover .choose-icon {
-  transform: scale(1.2) rotate(10deg);
-  animation-play-state: paused;
+  transform: scale(1.1);
+  color: var(--accent-color);
 }
 
 .choose-card h3 {
@@ -693,13 +637,7 @@
   transform: translateY(-3px);
 }
 
-/* Staggered animation for choose cards */
-.choose-card:nth-child(1) .choose-icon { animation-delay: 0s; }
-.choose-card:nth-child(2) .choose-icon { animation-delay: 0.5s; }
-.choose-card:nth-child(3) .choose-icon { animation-delay: 1s; }
-.choose-card:nth-child(4) .choose-icon { animation-delay: 1.5s; }
-.choose-card:nth-child(5) .choose-icon { animation-delay: 2s; }
-.choose-card:nth-child(6) .choose-icon { animation-delay: 2.5s; }
+/* Removed excessive staggered animations */
 /* Responsive Design for What I Do Section */
 @media (max-width: 768px) {
   .moving-services {
@@ -766,4 +704,87 @@
 
 .image-container:hover::before {
   opacity: 1;
+}
+/* Professional Enhancements */
+.hero-text h1 {
+  letter-spacing: -0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-text h2 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hero-text p {
+  font-weight: 400;
+  max-width: 500px;
+}
+
+/* Professional Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Subtle Professional Animations */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Professional Button Styling */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Clean Grid Layout */
+.grid-professional {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Professional Typography Scale */
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+
+/* Subtle Hover States */
+.hover-lift:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Professional Spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
 }
